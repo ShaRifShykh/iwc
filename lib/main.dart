@@ -5,8 +5,10 @@ import 'package:iwc/router/routers.dart';
 import 'package:iwc/values/branding_color.dart';
 import 'package:iwc/views/account/account_helper.dart';
 import 'package:iwc/views/auth/auth_helper.dart';
+import 'package:iwc/views/buyAndSell/buy_sell_helper.dart';
 import 'package:iwc/views/community/chatting/chatting_helper.dart';
 import 'package:iwc/views/community/feed/feed_helper.dart';
+import 'package:iwc/views/depositAndWithdraw/deposit_withdraw_helper.dart';
 import 'package:iwc/views/notification/notification_helper.dart';
 import 'package:iwc/views/wallet/wallet_helper.dart';
 import 'package:provider/provider.dart';
@@ -28,6 +30,8 @@ class IWC extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => NotificationHelper()),
         ChangeNotifierProvider(create: (_) => FeedHelper()),
         ChangeNotifierProvider(create: (_) => ChattingHelper()),
+        ChangeNotifierProvider(create: (_) => BuySellHelper()),
+        ChangeNotifierProvider(create: (_) => DepositWithdrawHelper()),
       ],
       child: MaterialApp(
         title: 'IWC',

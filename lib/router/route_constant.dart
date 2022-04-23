@@ -23,5 +23,9 @@ const String notificationRoute = "notification";
 const String homeRoute = "home";
 // Wallet Routes
 const String manageWalletRoute = "manageWallet";
+const String addCustomTokenRoute = "addCustomToken";
+// Send and Recieve Routes
+const String sendRoute = "send";
+const String recieveRoute = "recieve";
 // Community Routes
 const String chattingRoomRoute = "chattingRoom";

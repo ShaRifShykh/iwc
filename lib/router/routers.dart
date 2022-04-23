@@ -14,7 +14,10 @@ import 'package:iwc/views/home/home_screen.dart';
 import 'package:iwc/views/notification/notification_screen.dart';
 import 'package:iwc/views/onBoard/on_board_screen.dart';
 import 'package:iwc/views/splash/splash_screen.dart';
-import 'package:iwc/views/wallet/manage_wallet_screen.dart';
+import 'package:iwc/views/wallet/manageWallet/add_custom_token_screen.dart';
+import 'package:iwc/views/wallet/manageWallet/manage_wallet_screen.dart';
+import 'package:iwc/views/wallet/sendAndRecieve/recieve_screen.dart';
+import 'package:iwc/views/wallet/sendAndRecieve/send_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Routers {
@@ -105,6 +108,25 @@ class Routers {
       case manageWalletRoute:
         return PageTransition(
           child: const ManageWalletScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+
+      case addCustomTokenRoute:
+        return PageTransition(
+          child: const AddCustomTokenScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+
+      // Send and Recieve Routes
+      case sendRoute:
+        return PageTransition(
+          child: const SendScreen(),
+          type: PageTransitionType.rightToLeft,
+        );
+
+      case recieveRoute:
+        return PageTransition(
+          child: const RecieveScreen(),
           type: PageTransitionType.rightToLeft,
         );
 

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iwc/router/route_constant.dart';
 import 'package:iwc/values/constant_colors.dart';
 import 'package:iwc/values/path.dart';
 import 'package:iwc/views/wallet/wallet_helper.dart';
@@ -45,7 +46,9 @@ class _ManageWalletScreenState extends State<ManageWalletScreen> {
         margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         height: 50,
         child: MainButton(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, addCustomTokenRoute);
+          },
           text: "Add Custom Token",
         ),
       ),

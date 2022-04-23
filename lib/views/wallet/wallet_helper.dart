@@ -1,6 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iwc/values/constant_colors.dart';
 
@@ -48,6 +47,28 @@ class WalletHelper extends ChangeNotifier {
             },
           ),
         ],
+      ),
+    );
+  }
+
+  Widget textField({required BuildContext context, required String hintText}) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: ConstantColors.strokeColor3,
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: hintText,
+            hintStyle: GoogleFonts.poppins(
+              fontSize: 14,
+              color: ConstantColors.fontColor2,
+            )),
       ),
     );
   }

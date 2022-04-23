@@ -50,11 +50,14 @@ class _WalletScreenState extends State<WalletScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "Send",
-                      style: GoogleFonts.poppins(
-                        color: ConstantColors.whiteColor,
-                        fontWeight: FontWeight.w500,
+                    InkWell(
+                      onTap: () => Navigator.pushNamed(context, sendRoute),
+                      child: Text(
+                        "Send",
+                        style: GoogleFonts.poppins(
+                          color: ConstantColors.whiteColor,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                     Container(
@@ -62,11 +65,14 @@ class _WalletScreenState extends State<WalletScreen> {
                       width: 1.5,
                       color: ConstantColors.main,
                     ),
-                    Text(
-                      "Recieve",
-                      style: GoogleFonts.poppins(
-                        color: ConstantColors.whiteColor,
-                        fontWeight: FontWeight.w500,
+                    InkWell(
+                      onTap: () => Navigator.pushNamed(context, recieveRoute),
+                      child: Text(
+                        "Recieve",
+                        style: GoogleFonts.poppins(
+                          color: ConstantColors.whiteColor,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ],
